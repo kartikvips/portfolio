@@ -49,8 +49,11 @@
 	        speed: 200,
 	        loop:true,
 	        strings: [
-	          'Designer',
-	          'Developer'
+	          'Developer',
+			  'Photographer',
+			  'Mathlete',
+			  'Traveler'
+			  
 	        ],
 	        breakLines: false
     	});	
