@@ -52,7 +52,8 @@
 	          'Developer',
 			  'Photographer',
 			  'Mathlete',
-			  'Traveler'
+			  'Traveler',
+			  'Author'
 			  
 	        ],
 	        breakLines: false
