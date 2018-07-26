@@ -51,9 +51,8 @@
 	        strings: [
 	          'Developer',
 			  'Photographer',
-			  'Mathlete',
 			  'Traveler',
-			  'Author'
+			  'Writer'
 			  
 	        ],
 	        breakLines: false
