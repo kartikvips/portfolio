@@ -49,10 +49,9 @@
 	        speed: 200,
 	        loop:true,
 	        strings: [
+			  'Jedi Master',
 	          'Developer',
-			  'Photographer',
-			  'Traveler',
-			  'Writer'
+			  'Photographer'
 			  
 	        ],
 	        breakLines: false
