@@ -1288,3 +1288,8 @@ img {
   .p-r-95px-sm { padding-right: 95px; }
   .p-r-100px-sm { padding-right: 100px; }
 }
+
+.skills li{
+  text-align: center;
+  font-size: 70px;
+}
