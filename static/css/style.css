@@ -1293,3 +1293,9 @@ img {
   text-align: center;
   font-size: 70px;
 }
+
+.portfolio-img{
+  height: 190px;
+  width: 350px;
+  object-fit: cover;
+}

@@ -49,10 +49,10 @@
 	        speed: 200,
 	        loop:true,
 	        strings: [
-	          'Developer',
-			  'Photographer',
-			  'Writer',
-			  'Jedi'
+	          'Photographer.',
+			  'Developer.',
+			  'Writer.',
+			  'Jedi.'
 	        ],
 	        breakLines: false
     	});	
