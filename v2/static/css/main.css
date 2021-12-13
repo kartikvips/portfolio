@@ -208,11 +208,28 @@ header > div > div:last-of-type {
   transition: width 0.2s, -webkit-box-shadow .5s;
   transition: width 0.2s, box-shadow .5s;
   transition: width 0.2s, box-shadow .5s, -webkit-box-shadow .5s;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
 }
 
 header:hover > div > div:last-of-type {
   width: calc(100% - 15% - 14px);
   -webkit-box-shadow: 0 0 30px salmon;
           box-shadow: 0 0 30px salmon;
+}
+
+body > a {
+  position: absolute;
+  bottom: 50%;
+  margin-left: 50%;
+  margin-right: 50%;
+  color: salmon;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  text-align: center;
+}
+
+body > a:hover {
+  color: tomato;
 }
 /*# sourceMappingURL=main.css.map */
