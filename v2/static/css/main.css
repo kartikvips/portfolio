@@ -1,0 +1,241 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+html {
+  height: 100%;
+  background: black;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+}
+
+p:hover {
+  color: salmon;
+  cursor: none;
+  text-shadow: 0.01em 0.01em salmon;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header > section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 10px;
+  border-bottom: 0 solid salmon;
+  -webkit-transition: border-width 0.1s linear;
+  transition: border-width 0.1s linear;
+}
+
+header > section > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 20px;
+  margin: 10px;
+}
+
+header > section > div a, header > section > div img {
+  height: 100%;
+}
+
+header > section > div img {
+  margin-right: 10px;
+}
+
+header > section > div img:hover {
+  -webkit-box-shadow: 0px 0px 20px salmon;
+          box-shadow: 0px 0px 20px salmon;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header > section > p {
+  margin: 13px 10px 10px;
+}
+
+header > div {
+  max-width: 100vw;
+  margin: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header > div > div:first-of-type {
+  position: relative;
+  height: 15px;
+  width: 15%;
+  background: lightgray;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e2e2e2), color-stop(50%, #dbdbdb), color-stop(51%, #d1d1d1), to(#fefefe));
+  background: linear-gradient(to bottom, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%);
+  border-left: solid 6px grey;
+  border-right: solid 8px grey;
+  border-radius: 4px;
+}
+
+header > div > div:first-of-type::after {
+  position: absolute;
+  content: '';
+  width: 12px;
+  height: 6px;
+  background: salmon;
+  bottom: -6px;
+  left: 35%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+header > div > div:last-of-type {
+  height: 10px;
+  width: 0;
+  background: salmon;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  -webkit-box-shadow: 0px 0px 1px salmon;
+          box-shadow: 0px 0px 1px salmon;
+  -webkit-transition: width 0.2s, -webkit-box-shadow .5s;
+  transition: width 0.2s, -webkit-box-shadow .5s;
+  transition: width 0.2s, box-shadow .5s;
+  transition: width 0.2s, box-shadow .5s, -webkit-box-shadow .5s;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+}
+
+header:hover > div > div:first-of-type::after {
+  background: green;
+}
+
+header:hover > div > div:last-of-type {
+  width: calc(100% - 15% - 14px);
+  -webkit-box-shadow: 0 0 30px salmon;
+          box-shadow: 0 0 30px salmon;
+}
+
+body > a {
+  position: absolute;
+  bottom: 50%;
+  margin-left: 50%;
+  margin-right: 50%;
+  color: yellow;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  text-align: center;
+}
+
+body > a:hover {
+  color: tomato;
+}
+/*# sourceMappingURL=main.css.map */
