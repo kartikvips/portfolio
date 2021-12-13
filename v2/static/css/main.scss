@@ -179,6 +179,7 @@ header {
         left: 35%;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
+        transition: .1s;
       }
     }
 
@@ -197,6 +198,11 @@ header {
 
   &:hover {
     > div {
+      > div:first-of-type {
+        &::after {
+          background: green;
+        }
+      }
       > div:last-of-type {
         width: calc(100% - 15% - 14px);
         box-shadow: 0 0 30px salmon;
@@ -210,7 +216,7 @@ body > a {
   bottom: 50%;
   margin-left: 50%;
   margin-right: 50%;
-  color: salmon;
+  color: yellow;
   transition: 0.1s;
   text-align: center;
 

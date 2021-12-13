@@ -194,6 +194,8 @@ header > div > div:first-of-type::after {
   left: 35%;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  -webkit-transition: .1s;
+  transition: .1s;
 }
 
 header > div > div:last-of-type {
@@ -212,6 +214,10 @@ header > div > div:last-of-type {
           filter: blur(1px);
 }
 
+header:hover > div > div:first-of-type::after {
+  background: green;
+}
+
 header:hover > div > div:last-of-type {
   width: calc(100% - 15% - 14px);
   -webkit-box-shadow: 0 0 30px salmon;
@@ -223,7 +229,7 @@ body > a {
   bottom: 50%;
   margin-left: 50%;
   margin-right: 50%;
-  color: salmon;
+  color: yellow;
   -webkit-transition: 0.1s;
   transition: 0.1s;
   text-align: center;
