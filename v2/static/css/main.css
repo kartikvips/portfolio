@@ -233,9 +233,11 @@ body > a {
   -webkit-transition: 0.1s;
   transition: 0.1s;
   text-align: center;
+  text-shadow: 0 0 30px yellow;
 }
 
 body > a:hover {
   color: tomato;
+  text-shadow: 0 0 50px tomato;
 }
 /*# sourceMappingURL=main.css.map */
