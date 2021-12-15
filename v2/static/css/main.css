@@ -1,98 +1,3 @@
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-body {
-  line-height: 1;
-}
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-nav ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-
-a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-/* change colours to suit your needs */
-ins {
-  background-color: #ff9;
-  color: #000;
-  text-decoration: none;
-}
-
-/* change colours to suit your needs */
-mark {
-  background-color: #ff9;
-  color: #000;
-  font-style: italic;
-  font-weight: bold;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-abbr[title], dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* change border colour to suit your needs */
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #cccccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-input, select {
-  vertical-align: middle;
-}
-
 html {
   height: 100%;
   background: black;
@@ -102,6 +7,16 @@ html {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100%;
   overflow: auto;
 }
@@ -112,6 +27,13 @@ p:hover {
   text-shadow: 0.01em 0.01em salmon;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 header > section {
@@ -222,22 +144,35 @@ header:hover > div > div:last-of-type {
   width: calc(100% - 15% - 14px);
   -webkit-box-shadow: 0 0 30px salmon;
           box-shadow: 0 0 30px salmon;
+  -webkit-animation: kartik 2s infinite;
+          animation: kartik 2s infinite;
 }
 
 body > a {
-  position: absolute;
-  bottom: 50%;
-  margin-left: 50%;
-  margin-right: 50%;
   color: yellow;
   -webkit-transition: 0.1s;
   transition: 0.1s;
   text-align: center;
   text-shadow: 0 0 30px yellow;
+  margin: 5px;
 }
 
 body > a:hover {
   color: tomato;
   text-shadow: 0 0 50px tomato;
+}
+
+@-webkit-keyframes kartik {
+  50% {
+    -webkit-box-shadow: 0 0 10px salmon;
+            box-shadow: 0 0 10px salmon;
+  }
+}
+
+@keyframes kartik {
+  50% {
+    -webkit-box-shadow: 0 0 10px salmon;
+            box-shadow: 0 0 10px salmon;
+  }
 }
 /*# sourceMappingURL=main.css.map */

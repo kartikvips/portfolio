@@ -1,0 +1,16 @@
+@import "../static/css/html_reset.scss";
+
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-image: url("../static/img/field.jpg");
+  clip-path: polygon(50% 0%, 100% 25%, 90% 80%, 17% 100%, 0 85%, 10% 61%, 1% 44%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: orange;
+  background-blend-mode: lighten;
+}
+
+
