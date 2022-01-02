@@ -1,9 +1,7 @@
 html {
-  height: 100%;
   background: black;
   color: white;
   font-family: 'Roboto', sans-serif;
-  overflow: hidden;
 }
 
 body {
@@ -17,8 +15,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100%;
-  overflow: auto;
 }
 
 p:hover {
@@ -34,6 +30,15 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  background-color: black;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  z-index: 11;
+}
+
+header:hover {
+  background-color: #007fb9;
+  color: white;
 }
 
 header > section {
@@ -80,7 +85,7 @@ header > section > div img:hover {
 }
 
 header > section > p {
-  margin: 13px 10px 10px;
+  margin: 10px;
 }
 
 header > div {
@@ -174,5 +179,183 @@ body > a:hover {
     -webkit-box-shadow: 0 0 10px salmon;
             box-shadow: 0 0 10px salmon;
   }
+}
+
+main {
+  width: 100vw;
+}
+
+main > section {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main > section:first-of-type {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100px;
+  -webkit-box-shadow: 0 0 0px salmon;
+          box-shadow: 0 0 0px salmon;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  z-index: 1;
+}
+
+main > section:first-of-type span {
+  cursor: none;
+}
+
+main > section:first-of-type p {
+  display: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+main > section:first-of-type:hover {
+  background-color: white;
+  color: black;
+  width: 200px;
+  -webkit-box-shadow: 0 0 10px salmon;
+          box-shadow: 0 0 10px salmon;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+main > section:first-of-type:hover p {
+  display: block;
+  width: auto;
+}
+
+main > section:first-of-type.expand {
+  background-color: white;
+  color: black;
+  width: 200px;
+  -webkit-box-shadow: 0 0 10px salmon;
+          box-shadow: 0 0 10px salmon;
+}
+
+main > section:first-of-type.expand p {
+  display: block;
+  width: auto;
+}
+
+main > section.main > div:first-of-type > div:first-of-type {
+  background-image: url("../img/kartik-4.jpg");
+  background-size: 110%;
+  border-radius: 100%;
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  -webkit-box-shadow: 0 0 0 salmon;
+          box-shadow: 0 0 0 salmon;
+  -webkit-transition: -webkit-box-shadow 0.5s ease;
+  transition: -webkit-box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease, -webkit-box-shadow 0.5s ease;
+  cursor: none;
+}
+
+main > section.main > div:first-of-type > div:first-of-type:hover {
+  -webkit-box-shadow: 0 0 30px salmon;
+          box-shadow: 0 0 30px salmon;
+}
+
+main > section p {
+  margin: 5px 0;
+}
+
+main > section p:first-of-type {
+  margin-top: 24px;
+}
+
+main > section.main > div:first-of-type {
+  text-align: center;
+}
+
+section.projects > a {
+  margin: 15px 0;
+  padding: 10px 20px;
+  width: 450px;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(209, 209, 209, 0.3);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  opacity: 0.8;
+  cursor: pointer;
+  border-radius: 4px;
+  color: white;
+}
+
+section.projects > a:first-of-type {
+  background-image: url("../img/fable.png");
+}
+
+section.projects > a:first-of-type::before {
+  content: "fable";
+}
+
+section.projects > a:nth-of-type(2) {
+  background-image: url("../img/mediaplayer.png");
+}
+
+section.projects > a:nth-of-type(2)::before {
+  content: "audioViz";
+}
+
+section.projects > a:last-of-type {
+  background-image: url("../img/elra.png");
+  background-position: top;
+}
+
+section.projects > a:last-of-type::before {
+  content: "Elra";
+}
+
+section.projects > a::before {
+  position: absolute;
+  left: -100px;
+}
+
+section.projects > a:hover {
+  opacity: 1;
+}
+
+section.projects > a:hover::before {
+  color: white;
+}
+
+section.projects {
+  background-color: darksalmon;
+}
+
+section.main {
+  background-color: darkolivegreen;
 }
 /*# sourceMappingURL=main.css.map */

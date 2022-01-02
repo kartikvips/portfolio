@@ -1,17 +1,17 @@
 html {
-  height: 100%;
+  // height: 100%;
   background: black;
   color: white;
   font-family: 'Roboto', sans-serif;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
-  overflow: auto;
+  // height: 100%;
+  // overflow: auto;
   // background-image: url("../img/gifbar.gif");
   // background-repeat: no-repeat;
   // background-position: center;
@@ -32,6 +32,15 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  background-color: black;
+  transition: 0.5s ease;
+  z-index: 11;
+
+  &:hover {
+    background-color: rgb(0, 127, 185);
+    color: white;
+  }
+  
   > section {
     position: relative;
     display: flex;
@@ -62,7 +71,7 @@ header {
     }
 
     > p {
-      margin: 13px 10px 10px;
+      margin: 10px;
     }
 
     &:hover {
@@ -143,4 +152,161 @@ body > a {
 
 @keyframes kartik {
   50% {box-shadow: 0 0 10px salmon;}
+}
+
+main {
+  // height: 100vh;
+  width: 100vw;
+
+  > section {
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &:first-of-type {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100px;
+      box-shadow: 0 0 0px salmon;
+      transition: 0.5s ease;
+      z-index: 1;
+
+      span {
+        cursor: none;
+      }
+
+      p {
+        // width: 0;
+        display: none;
+        cursor: pointer;
+        overflow: hidden;
+      }
+
+      &:hover {
+        background-color: white;
+        color: black;
+        width: 200px;
+        box-shadow: 0 0 10px salmon;
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 8px;
+
+        p {
+          display: block;
+          width: auto;
+        }
+      }
+      &.expand {
+        background-color: white;
+        color: black;
+        width: 200px;
+        box-shadow: 0 0 10px salmon;
+
+        p {
+          display: block;
+          width: auto;
+        }
+      }
+    }
+
+    &.main > div:first-of-type > div:first-of-type {
+      background-image: url("../img/kartik-4.jpg");
+      background-size: 110%;
+      border-radius: 100%;
+      background-position-x: 100%;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      box-shadow: 0 0 0 salmon;
+      transition: box-shadow 0.5s ease;
+      cursor: none;
+      // border: 0px solid salmon;
+
+      &:hover {
+        // border: 1px solid salmon;
+        box-shadow: 0 0 30px salmon;
+      }
+    }
+
+    p {
+      margin: 5px 0;
+
+      &:first-of-type {
+        margin-top: 24px;
+      }
+    }
+
+    &.main > div:first-of-type {
+      text-align: center;
+    }
+  }
+}
+
+section.projects > a {
+  margin: 15px 0;
+  padding: 10px 20px;
+  width: 450px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(209,209,209, .3);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  opacity: 0.8;
+  cursor: pointer;
+  border-radius: 4px;
+  color: white;
+
+  &:first-of-type {
+    background-image: url("../img/fable.png");
+
+    &::before {
+      content: "fable";
+    }
+  }
+
+  &:nth-of-type(2){
+    background-image: url("../img/mediaplayer.png");
+
+    &::before {
+      content: "audioViz";
+    }
+  }
+
+  &:last-of-type{
+    background-image: url("../img/elra.png");
+    background-position: top;
+
+    &::before {
+      content: "Elra";
+    }
+  }
+
+  &::before {
+    position: absolute;
+    left: -100px;
+  }
+
+  &:hover {
+    opacity: 1;
+
+    &::before {
+      color: white;
+    }
+  }
+}
+
+section.projects {
+  background-color: darksalmon;
+}
+
+section.main {
+  background-color: darkolivegreen;
 }
