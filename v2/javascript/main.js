@@ -13,13 +13,6 @@ function addEvents() {
 }
 
 function scrollToEl(link, el) {
-  link.addEventListener("mouseover", () => {
-    console.log("gets here", el.offsetTop + 'px');
-    window.scrollTo({
-      top: el.offsetTop,
-      behavior: "smooth",
-    })
-  }, false);
   link.addEventListener("click", () => {
     console.log("gets here", el.offsetTop + 'px');
     window.scrollTo({
